@@ -78,18 +78,23 @@ public class MergeNFilter {
 						int counter = 0;
 
 						while(toolong) {
-							int indexCut = 0;
 							for (String key : speciesSequences.keySet()) {
 								String[] value = speciesSequences.get(key);
 								int lengthAlig = value[6].length();
 								if (lengthAlig <= 120000) {
 									toolong = false;
-								} else if (counter == 0 && toolong){
-									indexCut = value[6].indexOf("------------------",lengthAlig/2);
+								} else {
+									int indexCut = value[6].indexOf("------------------",lengthAlig/2);
 									String partOne = value[6].substring(0, indexCut + 10);
-									value[6] = partOne;
-								} else if (counter == 1){
 									String partTwo = value[6].substring(indexCut);
+									value[6] = partOne;
+									String eachSpeciesInfo = Arrays.toString(value);
+
+									//remove the right and left bracket
+									String noBrackets = eachSpeciesInfo.replace("[", "")
+											.replace("]", "")
+											.replace(",", "\t");
+									out.write(noBrackets + "\n");
 									value[6] = partTwo;
 								}
 								String eachSpeciesInfo = Arrays.toString(value);
