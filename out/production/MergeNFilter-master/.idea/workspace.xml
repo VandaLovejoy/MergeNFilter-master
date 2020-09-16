@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="958f5e36-7724-4f13-94e6-3fb314dca312" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1hW5r25HCH4IlOfAVpZEXcGn62K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/UniversitedeMontreal/Research/PhD/softwares/Github" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+  </component>
+  <component name="RunManager">
+    <configuration name="MergeNFilter" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MergeNFilter" />
+      <module name="MergeNFilter-master" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\vanda\Downloads\57_mammals.epo.21_1.maf\57_mammals.epo.21_1.maf" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="958f5e36-7724-4f13-94e6-3fb314dca312" name="Default Changelist" comment="" />
+      <created>1600114202966</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600114202966</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600279538927">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1600279538927" />
+    <state x="421" y="46" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1600114239225">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="46" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.680@0.0.1280.680" timestamp="1600114239225" />
+    <state width="466" height="466" key="DebuggerActiveHint" timestamp="1600194922323">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="466" height="466" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1600194922323" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1600278127734">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600278127734" />
+    <state width="1024" height="118" key="GridCell.Tab.0.bottom" timestamp="1600281898295">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1024" height="118" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600281898295" />
+    <state width="1024" height="118" key="GridCell.Tab.0.center" timestamp="1600281898295">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1024" height="118" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600281898295" />
+    <state width="1024" height="118" key="GridCell.Tab.0.left" timestamp="1600281898295">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1024" height="118" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600281898295" />
+    <state width="1024" height="118" key="GridCell.Tab.0.right" timestamp="1600281898295">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1024" height="118" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600281898295" />
+    <state width="1281" height="18" key="GridCell.Tab.1.bottom" timestamp="1600281898293">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1281" height="18" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600281898293" />
+    <state width="1281" height="18" key="GridCell.Tab.1.center" timestamp="1600281898293">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1281" height="18" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1600281898293" />
+    <state width="1281" height="18" key="GridCell.Tab.1.left" timestamp="1600281898293">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1281" height="18" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1600281898293" />
+    <state width="1281" height="18" key="GridCell.Tab.1.right" timestamp="1600281898293">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1281" height="18" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1600281898293" />
+    <state x="115" y="0" key="SettingsEditor" timestamp="1600281139051">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="115" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600281139051" />
+    <state width="647" height="261" key="XDebugger.FullValuePopup" timestamp="1600201819501">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="647" height="261" key="XDebugger.FullValuePopup/0.0.1280.680@0.0.1280.680" timestamp="1600201819501" />
+  </component>
+</project>
