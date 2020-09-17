@@ -74,43 +74,28 @@ public class MergeNFilter {
 							segDups.write(noBrackets + "\n");
 						}
 
-						boolean toolong = true;
-						int counter = 0;
 
-						while(toolong) {
 							for (String key : speciesSequences.keySet()) {
-								String[] value = speciesSequences.get(key);
-								int lengthAlig = value[6].length();
-								if (lengthAlig <= 120000) {
-									toolong = false;
-								} else {
-									int indexCut = value[6].indexOf("------------------",lengthAlig/2);
-									String partOne = value[6].substring(0, indexCut + 10);
-									String partTwo = value[6].substring(indexCut);
-									value[6] = partOne;
-									String eachSpeciesInfo = Arrays.toString(value);
-
-									//remove the right and left bracket
-									String noBrackets = eachSpeciesInfo.replace("[", "")
-											.replace("]", "")
-											.replace(",", "\t");
-									out.write(noBrackets + "\n");
-									value[6] = partTwo;
+								String [] value = speciesSequences.get(key);
+								ArrayList<String> value2 = new ArrayList<>(Arrays.asList(value));
+								int lengthAlig = (value2.get(6)).length();
+								if (lengthAlig >= 120000) {
+									int indexCut = value2.get(6).indexOf(
+											"------------------",lengthAlig/2);
+									value2.add(value2.get(6).substring(0, indexCut + 10));
+									value2.add("\n");
+									value2.add(value2.get(6).substring(indexCut));
 								}
-								String eachSpeciesInfo = Arrays.toString(value);
 
-								//remove the right and left bracket
-								String noBrackets = eachSpeciesInfo.replace("[", "")
-										.replace("]", "")
-										.replace(",", "\t");
-								out.write(noBrackets + "\n");
+								Iterator iter = value2.iterator();
+								String eachSpeciesInfo = "";
+								while (iter.hasNext()) {
+									eachSpeciesInfo += iter.next() + "\t";
+								}
+
+								out.write(eachSpeciesInfo + "\n");
 							}
-							if (counter == 0 ){
-								counter ++;
-							} else if(counter == 1){
-								toolong = false;
-							}
-						}
+
 					}
 					out.write("\n");
 				}
