@@ -85,6 +85,7 @@ public class MergeNFilter {
 									value2.add(value2.get(6).substring(0, indexCut + 10));
 									value2.add("\n");
 									value2.add(value2.get(6).substring(indexCut));
+									value2.remove(6);
 								}
 
 								Iterator iter = value2.iterator();
