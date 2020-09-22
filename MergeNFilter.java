@@ -88,10 +88,14 @@ public class MergeNFilter {
 									value2.remove(6);
 								}
 
-								Iterator iter = value2.iterator();
+
 								String eachSpeciesInfo = "";
-								while (iter.hasNext()) {
-									eachSpeciesInfo += iter.next() + "\t";
+								for (int counter = 0; counter < value2.size(); counter++) {
+									if(counter!= 6) {
+										eachSpeciesInfo += value2.get(counter) + "\t";
+									} else {
+										eachSpeciesInfo += value2.get(counter);
+									}
 								}
 
 								out.write(eachSpeciesInfo + "\n");
