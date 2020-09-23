@@ -92,11 +92,11 @@ public class MergeNFilter {
 								String[] mammal = speciesSequences.get(key);
 								ArrayList<String> value2 = new ArrayList<>(Arrays.asList(mammal));
 								if (counter == 0 && toolong){
-									String partOne = value2[6].substring(0, indexCut + 10);
-									value[6] = partOne;
+									value2.add(value2.get(6).substring(0, indexCut + 10));
+									value2.remove(6);
 								} else if (counter == 1){
-									String partTwo = value[6].substring(indexCut);
-									value[6] = partTwo;
+									value2.add(value2.get(6).substring(indexCut));
+									value2.remove(6);
 								}
 								String eachSpeciesInfo = Arrays.toString(value);
 
