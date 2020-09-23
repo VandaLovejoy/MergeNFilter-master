@@ -89,9 +89,10 @@ public class MergeNFilter {
 								indexCut = value[6].indexOf("------------------",lengthAlig/2);
 								}
 							for (String key : speciesSequences.keySet()) {
-
+								String[] mammal = speciesSequences.get(key);
+								ArrayList<String> value2 = new ArrayList<>(Arrays.asList(mammal));
 								if (counter == 0 && toolong){
-									String partOne = value[6].substring(0, indexCut + 10);
+									String partOne = value2[6].substring(0, indexCut + 10);
 									value[6] = partOne;
 								} else if (counter == 1){
 									String partTwo = value[6].substring(indexCut);
