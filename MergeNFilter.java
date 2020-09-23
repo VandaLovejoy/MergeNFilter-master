@@ -88,9 +88,11 @@ public class MergeNFilter {
 								} else {
 								indexCut = value[6].indexOf("------------------",lengthAlig/2);
 								}
+							String[] mammal;
+							ArrayList<String> value2;
 							for (String key : speciesSequences.keySet()) {
-								String[] mammal = speciesSequences.get(key);
-								ArrayList<String> value2 = new ArrayList<>(Arrays.asList(mammal));
+								mammal = speciesSequences.get(key);
+								value2 = new ArrayList<>(Arrays.asList(mammal));
 								if (counter == 0 && toolong){
 									value2.add(value2.get(6).substring(0, indexCut + 10));
 									value2.remove(6);
@@ -98,15 +100,19 @@ public class MergeNFilter {
 									value2.add(value2.get(6).substring(indexCut));
 									value2.remove(6);
 								}
-								String eachSpeciesInfo = Arrays.toString(value);
 
-								//remove the right and left bracket
-								String noBrackets = eachSpeciesInfo.replace("[", "")
-										.replace("]", "")
-										.replace(",", "\t");
-
-								out.write(noBrackets + "\n");
 							}
+						for(int i =0; i <)
+							value2.get()
+							String eachSpeciesInfo = Arrays.toString(value);
+
+							//remove the right and left bracket
+							String noBrackets = eachSpeciesInfo.replace("[", "")
+									.replace("]", "")
+									.replace(",", "\t");
+
+							out.write(noBrackets + "\n");
+
 							if (counter == 0 ){
 								counter ++;
 							} else if(counter == 1){
