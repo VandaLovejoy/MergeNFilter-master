@@ -77,7 +77,8 @@ public class MergeNFilter {
 						boolean toolong = true;
 						int counter = 0;
 
-						while(toolong) {
+						while(toolong && speciesSequences.size() > 1 ) {
+
 							int indexCut = 0;
 							for (String key : speciesSequences.keySet()) {
 								String[] value = speciesSequences.get(key);
@@ -98,6 +99,7 @@ public class MergeNFilter {
 								String noBrackets = eachSpeciesInfo.replace("[", "")
 										.replace("]", "")
 										.replace(",", "\t");
+								out.write( "a" +"\n");
 								out.write(noBrackets + "\n");
 							}
 							if (counter == 0 ){
