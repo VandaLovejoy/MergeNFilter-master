@@ -77,50 +77,64 @@ public class MergeNFilter {
 
 						boolean toolong = true;
 						int counter = 0;
+						int indexCut = 0;
+						String[] value = speciesSequences.get("homo_sapiens");
+						int lengthAlig = value[6].length();
 
-						while(toolong && speciesSequences.size() > 1 ) {
-							out.write( "a" +"\n");
-							int indexCut = 0;
-							String[] value = speciesSequences.get("homo_sapiens");
-							int lengthAlig = value[6].length();
+						while (toolong && speciesSequences.size() > 1) {
+							out.write("a" + "\n");
 							if (lengthAlig <= 120000) {
-									toolong = false;
-								} else {
-								indexCut = value[6].indexOf("------------------",lengthAlig/2);
-								}
+								toolong = false;
+							} else {
+								indexCut = value[6].indexOf("------------------", lengthAlig / 2);
+							}
 							String[] mammal;
-							ArrayList<String> value2;
+							ArrayList<String> value2 = new ArrayList<>();
 							for (String key : speciesSequences.keySet()) {
 								mammal = speciesSequences.get(key);
 								value2 = new ArrayList<>(Arrays.asList(mammal));
-								if (counter == 0 && toolong){
+								if (counter == 0 && toolong) {
 									value2.add(value2.get(6).substring(0, indexCut + 10));
 									value2.remove(6);
-								} else if (counter == 1){
+								} else if (counter == 1) {
 									value2.add(value2.get(6).substring(indexCut));
 									value2.remove(6);
 								}
+								String eachSpeciesInfo ="";
+								for (int i = 0; i < value2.size(); i++) {
+									if(i!= (value2.size()-1)) {
+										eachSpeciesInfo += (value2.get(i)) + "\t";
+									} else {
+										eachSpeciesInfo += (value2.get(i));
+									}
+								}
+									/*//remove the right and left bracket
+									String noBrackets = eachSpeciesInfo.replace("[", "")
+											.replace("]", "")
+											.replace(",", "\t");
+*/
+									out.write(eachSpeciesInfo + "\n");
 
 							}
-						for(int i =0; i <)
-							value2.get()
-							String eachSpeciesInfo = Arrays.toString(value);
+							/*for (int i = 0; i < value2.size(); i++) {
+								String eachSpeciesInfo = (value2.get(i));
 
-							//remove the right and left bracket
-							String noBrackets = eachSpeciesInfo.replace("[", "")
-									.replace("]", "")
-									.replace(",", "\t");
+								//remove the right and left bracket
+								String noBrackets = eachSpeciesInfo.replace("[", "")
+										.replace("]", "")
+										.replace(",", "\t");
 
-							out.write(noBrackets + "\n");
-
-							if (counter == 0 ){
+								out.write(noBrackets + "\n");*/
+								if(counter ==1 ){
+									toolong =false;
+								} else if ( counter == 0 && toolong){
 								counter ++;
-							} else if(counter == 1){
-								toolong = false;
-							}
+								}
+
+
 						}
+						out.write("\n");
 					}
-					out.write("\n");
 				}
 				input++;
 				entry.close();
