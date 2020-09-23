@@ -35,9 +35,7 @@ public class MergeNFilter {
 				String line;
 				while ((line = entry.readLine()) != null) {
 
-					if (line.length() != 0 && line.charAt(0) == 'a') {
-						out.write(line);
-					} else if (line.length() != 0 && line.charAt(0) == 's') {
+					if(line.length() != 0 && line.charAt(0) == 's') {
 						LinkedHashMap<String, String[]> speciesSequences = new LinkedHashMap<>();
 						ArrayList<String[]> duplicateSequences = new ArrayList<>();
 						while (line.length() != 0 && line.charAt(0) == 's') {
@@ -78,6 +76,7 @@ public class MergeNFilter {
 						}
 
 						if (speciesSequences.size() > 1){
+							out.write( "a" +"\n");
 							for (String key : speciesSequences.keySet()) {
 								String[] value = speciesSequences.get(key);
 								String eachSpeciesInfo = Arrays.toString(value);
