@@ -59,6 +59,9 @@ public class MergeNFilter {
 								System.exit(0);
 						}
 
+						if (speciesSequences.size() == 1) {
+							duplicateSequences.add((speciesSequences.get("homo_sapiens")));
+						}
 
 						for (int i = 0; i < duplicateSequences.size(); i++) {
 							String[] arraySpecies = duplicateSequences.get(i);
