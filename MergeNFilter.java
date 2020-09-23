@@ -49,9 +49,9 @@ public class MergeNFilter {
 								if (!(speciesSequences.containsKey(nameSpeciesOnly))) {
 									speciesSequences.put(nameSpeciesOnly, arraySequenceInfo);
 								} else {
-									if (duplicateSequences.size() == 0) {
+									/*if (duplicateSequences.size() == 0) {
 										duplicateSequences.add(speciesSequences.get("homo_sapiens"));
-									}
+									}*/
 									duplicateSequences.add(arraySequenceInfo);
 								}
 							}
@@ -59,8 +59,8 @@ public class MergeNFilter {
 							if (line == null)
 								System.exit(0);
 						}
-						if (speciesSequences.size() == 1){
-							duplicateSequences.add((speciesSequences.get("homo_sapiens")))
+						if (speciesSequences.size() == 1) {
+							duplicateSequences.add((speciesSequences.get("homo_sapiens")));
 						}
 
 						for (int i = 0; i < duplicateSequences.size(); i++) {
@@ -77,16 +77,17 @@ public class MergeNFilter {
 							segDups.write(noBrackets + "\n");
 						}
 
+						if (speciesSequences.size() > 1){
+							for (String key : speciesSequences.keySet()) {
+								String[] value = speciesSequences.get(key);
+								String eachSpeciesInfo = Arrays.toString(value);
 
-						for (String key : speciesSequences.keySet()) {
-							String[] value = speciesSequences.get(key);
-							String eachSpeciesInfo = Arrays.toString(value);
-
-							//remove the right and left bracket
-							String noBrackets = eachSpeciesInfo.replace("[", "")
-									.replace("]", "")
-									.replace(",", "\t");
-							out.write(noBrackets + "\n");
+								//remove the right and left bracket
+								String noBrackets = eachSpeciesInfo.replace("[", "")
+										.replace("]", "")
+										.replace(",", "\t");
+								out.write(noBrackets + "\n");
+							}
 						}
 					}
 					out.write("\n");
