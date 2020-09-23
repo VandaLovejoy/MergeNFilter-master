@@ -81,13 +81,16 @@ public class MergeNFilter {
 						while(toolong && speciesSequences.size() > 1 ) {
 							out.write( "a" +"\n");
 							int indexCut = 0;
-							for (String key : speciesSequences.keySet()) {
-								String[] value = speciesSequences.get(key);
-								int lengthAlig = value[6].length();
-								if (lengthAlig <= 120000) {
+							String[] value = speciesSequences.get("homo_sapiens");
+							int lengthAlig = value[6].length();
+							if (lengthAlig <= 120000) {
 									toolong = false;
-								} else if (counter == 0 && toolong){
-									indexCut = value[6].indexOf("------------------",lengthAlig/2);
+								} else {
+								indexCut = value[6].indexOf("------------------",lengthAlig/2);
+								}
+							for (String key : speciesSequences.keySet()) {
+
+								if (counter == 0 && toolong){
 									String partOne = value[6].substring(0, indexCut + 10);
 									value[6] = partOne;
 								} else if (counter == 1){
