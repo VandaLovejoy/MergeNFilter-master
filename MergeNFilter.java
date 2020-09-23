@@ -83,7 +83,7 @@ public class MergeNFilter {
 
 						while (toolong && speciesSequences.size() > 1) {
 							out.write("a" + "\n");
-							if (lengthAlig <= 120000) {
+							if (lengthAlig <= 160000) {
 								toolong = false;
 							} else {
 								indexCut = value[6].indexOf("------------------", lengthAlig / 2);
