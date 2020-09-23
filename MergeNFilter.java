@@ -23,6 +23,7 @@ public class MergeNFilter {
 					args[0].lastIndexOf("_")) + "_segmtl_dups.txt"));
 			BufferedWriter out = new BufferedWriter(new FileWriter(args[0].substring(0, args[0].lastIndexOf(
 					"_")) + ".maf"));
+			;
 			out.write("##maf version=1 \n" +
 					"# original dump date: Fri Jun 05 14:22:00 2020\n# ensembl release: 59\n" +
 					"# emf comment: Alignments: 11 eutherian mammals EPO\n# emf comment: Region:" +
@@ -58,7 +59,9 @@ public class MergeNFilter {
 							if (line == null)
 								System.exit(0);
 						}
-
+						if (speciesSequences.size() == 1){
+							duplicateSequences.add((speciesSequences.get("homo_sapiens")))
+						}
 
 						for (int i = 0; i < duplicateSequences.size(); i++) {
 							String[] arraySpecies = duplicateSequences.get(i);
@@ -74,37 +77,16 @@ public class MergeNFilter {
 							segDups.write(noBrackets + "\n");
 						}
 
-						boolean toolong = true;
-						int counter = 0;
 
-						while(toolong) {
-							int indexCut = 0;
-							for (String key : speciesSequences.keySet()) {
-								String[] value = speciesSequences.get(key);
-								int lengthAlig = value[6].length();
-								if (lengthAlig <= 120000) {
-									toolong = false;
-								} else if (counter == 0 && toolong){
-									indexCut = value[6].indexOf("------------------",lengthAlig/2);
-									String partOne = value[6].substring(0, indexCut + 10);
-									value[6] = partOne;
-								} else if (counter == 1){
-									String partTwo = value[6].substring(indexCut);
-									value[6] = partTwo;
-								}
-								String eachSpeciesInfo = Arrays.toString(value);
+						for (String key : speciesSequences.keySet()) {
+							String[] value = speciesSequences.get(key);
+							String eachSpeciesInfo = Arrays.toString(value);
 
-								//remove the right and left bracket
-								String noBrackets = eachSpeciesInfo.replace("[", "")
-										.replace("]", "")
-										.replace(",", "\t");
-								out.write(noBrackets + "\n");
-							}
-							if (counter == 0 ){
-								counter ++;
-							} else if(counter == 1){
-								toolong = false;
-							}
+							//remove the right and left bracket
+							String noBrackets = eachSpeciesInfo.replace("[", "")
+									.replace("]", "")
+									.replace(",", "\t");
+							out.write(noBrackets + "\n");
 						}
 					}
 					out.write("\n");
