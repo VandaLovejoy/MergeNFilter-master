@@ -45,11 +45,14 @@ public class MergeNFilter {
 									nameSpeciesWithChro.indexOf("."));
 							if (!nameSpeciesOnly.equals("ancestral_sequences")) {
 								if (!(speciesSequences.containsKey(nameSpeciesOnly))) {
+									String choppedSeq = arraySequenceInfo[6].substring(0,
+											(arraySequenceInfo[6].length())- 100);
+									arraySequenceInfo[6]= choppedSeq;
 									speciesSequences.put(nameSpeciesOnly, arraySequenceInfo);
 								} else {
-									/*if (duplicateSequences.size() == 0) {
+									if (duplicateSequences.size() == 0) {
 										duplicateSequences.add(speciesSequences.get("homo_sapiens"));
-									}*/
+									}
 									duplicateSequences.add(arraySequenceInfo);
 								}
 							}
