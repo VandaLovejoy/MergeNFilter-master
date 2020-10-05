@@ -45,6 +45,8 @@ public class MergeNFilter {
 									nameSpeciesWithChro.indexOf("."));
 							if (!nameSpeciesOnly.equals("ancestral_sequences")) {
 								if (!(speciesSequences.containsKey(nameSpeciesOnly))) {
+									String nullTerminated = arraySequenceInfo[6] + "\0";
+									arraySequenceInfo[6] = nullTerminated;
 									speciesSequences.put(nameSpeciesOnly, arraySequenceInfo);
 								} else {
 									/*if (duplicateSequences.size() == 0) {
