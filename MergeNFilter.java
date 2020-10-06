@@ -87,7 +87,6 @@ public class MergeNFilter {
 								String noBrackets = eachSpeciesInfo.replace("[", "")
 										.replace("]", "")
 										.replace(",", "\t");
-								System.out.print(noBrackets+ "\0"+ "\n");
 								out.write(noBrackets + "\0");
 							}
 						}
